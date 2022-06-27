@@ -60,12 +60,6 @@ jobs:
       - checkout
       - install_client
       - install_server
-      - run:
-          name: Test Client
-          command: yarn client:test
-      - run:
-          name: Test Server
-          command: yarn server:test
   deploy:
     docker:
       - image: "cimg/base:stable"
@@ -77,12 +71,6 @@ jobs:
       - checkout
       - install_client
       - install_server
-      - run:
-          name: Deploy Client
-          command: yarn client:deploy
-      - run:
-          name: Deploy Server
-          command: yarn server:deploy
 
 workflows:
   build_test_deploy:
