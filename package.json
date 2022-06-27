@@ -8,6 +8,6 @@
         "server:install": "cd server && yarn install",
         "server:build": "cd server && yarn build",
         "server:deploy": "cd server && yarn deploy",
-        "server:test": "cd client && yarn test"
+        "server:test": "cd server && yarn test"
     }
 }
