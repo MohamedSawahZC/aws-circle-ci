@@ -51,12 +51,6 @@ jobs:
       - checkout
       - install_client
       - install_server
-      - run:
-          name: Build Client
-          command: cd client && yarn build
-      - run:
-          name: Build Server
-          command: cd server && yarn build
   test:
     docker:
       - image: "cimg/base:stable"
