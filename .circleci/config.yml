@@ -7,6 +7,11 @@ orbs:
   aws-cli: circleci/aws-cli@2.0.3
   eb: circleci/aws-elastic-beanstalk@1.0.0
 
+general:
+  branches:
+    only:
+      - master #master branch
+
 commands:
   install_client:
     description: "command for Client Installation"
