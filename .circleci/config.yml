@@ -86,6 +86,12 @@ jobs:
       - install_client
       - install_server
       - run:
+          name: Create env file
+          command: echo "REACT_APP_API_URL=http://aws-circle-ci-api-dev.eba-qcfvpf4b.us-east-1.elasticbeanstalk.com" >>client/.env
+      - run:
+          name: Print
+          command: cat client/.env
+      - run:
           name: Deploy Client
           command: yarn client:deploy
       - run:
